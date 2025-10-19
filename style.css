@@ -332,6 +332,34 @@ nav .order:after {
     66% { transform: translateY(10px) rotate(240deg); }
 }
 
+/* Video Display Fix */
+.preview-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.preview-video video {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #000; /* Fallback background */
+  border: 3px solid white;
+}
+
+/* Make sure video is visible above gradient */
+.preview-container {
+  position: relative;
+  z-index: 10;
+}
 .products-preview .item {
     text-align: center;
     position: relative;
